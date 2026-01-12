@@ -4,7 +4,7 @@ import com.tinyshellzz.InvManager.config.PluginConfig;
 import com.tinyshellzz.InvManager.core.GameManager;
 import com.tinyshellzz.InvManager.utils.MyUtil;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
+import org.bukkit.damage.DamageType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -29,6 +29,11 @@ public class EntityDamageByEntityListener implements Listener {
         // Only melee — ignore arrows, potions, tridents, etc.
         if (event.getCause() != EntityDamageEvent.DamageCause.ENTITY_ATTACK
                 && event.getCause() != EntityDamageEvent.DamageCause.ENTITY_SWEEP_ATTACK) {
+            return;
+        }
+
+        // Only melee — only accept PLAYER_ATTACK DamageType for plugin custom damage compatibility
+        if (event.getDamageSource().getDamageType() != DamageType.PLAYER_ATTACK) {
             return;
         }
 

@@ -1,5 +1,5 @@
 import java.text.SimpleDateFormat
-version = "1.1.1"
+version = "1.1.2"
 
 plugins {
     `java-library`
@@ -18,7 +18,7 @@ repositories {
 dependencies {
     compileOnly("org.jetbrains:annotations:24.0.1")
     compileOnly("org.spigotmc:spigot-api:1.21.4-R0.1-SNAPSHOT")
-    compileOnly("dev.folia:folia-api:1.20.1-R0.1-SNAPSHOT")
+    compileOnly("dev.folia:folia-api:1.21.6-R0.1-SNAPSHOT")
     implementation("com.google.code.gson:gson:2.11.0")
     compileOnly ("com.comphenix.protocol:ProtocolLib:5.1.0")
 }
