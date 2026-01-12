@@ -6,7 +6,8 @@ import org.bukkit.attribute.Attribute;
 
 public class BodySizeChanger {
     public static void changeBodySize(Player p, double scale) {
-        AttributeInstance attribute = p.getAttribute(Attribute.valueOf("GENERIC_SCALE"));
+//        AttributeInstance attribute = p.getAttribute(Attribute.valueOf("GENERIC_SCALE"));
+        AttributeInstance attribute = p.getAttribute(Attribute.SCALE);
         if (attribute == null) return;
         attribute.setBaseValue(scale);
     }

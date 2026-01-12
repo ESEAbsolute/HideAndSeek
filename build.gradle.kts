@@ -17,10 +17,10 @@ repositories {
 
 dependencies {
     compileOnly("org.jetbrains:annotations:24.0.1")
-    compileOnly("org.spigotmc:spigot-api:1.21.4-R0.1-SNAPSHOT")
+//    compileOnly("org.spigotmc:spigot-api:1.21.4-R0.1-SNAPSHOT")
     compileOnly("dev.folia:folia-api:1.21.6-R0.1-SNAPSHOT")
     implementation("com.google.code.gson:gson:2.11.0")
-    compileOnly ("com.comphenix.protocol:ProtocolLib:5.1.0")
+    compileOnly ("net.dmulloy2:ProtocolLib:5.1.0")
 }
 
 group = "com.tinyshellzz"
